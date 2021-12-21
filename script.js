@@ -72,7 +72,10 @@ function updateProgress(e) {
 
 function setProgress(e) {
     const width = this.clientWidth
-    console.log(width)
+    const clickX = e.offsetX
+    const duration = audio.duration
+
+    audio.currentTime = (clickX / width) * duration
 }
 
 // Event listeners
